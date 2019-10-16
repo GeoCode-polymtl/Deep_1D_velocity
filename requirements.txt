@@ -1,0 +1,5 @@
+tensorflow-gpu==1.15.0rc3
+scipy==1.2.0 
+hdf5storage==0.1.15
+matplotlib==3.0.2
+SeisCL
