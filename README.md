@@ -4,7 +4,6 @@
 
 Code for reproducing results in ["Seismic velocity estimation: a deep recurrent neural-network approach"](tobeannounced)
 
-To use pretrained CelebA-HQ model, make your own manipulation vectors and run our interactive demo, check `demo` folder.
 
 ## Installation
 
@@ -17,10 +16,10 @@ You should clone this repository
 We provide a Docker image that contains all necessary python libraries like Tensorflow
 and the seismic modeling code SeisCL.
 
-You first need to install Docker Engine, following the instructions [here](https://docs.docker.com/install/).
+You first need to install the Docker Engine, following the instructions [here](https://docs.docker.com/install/).
 To use GPUs, you also need to install the [Nvidia docker](https://github.com/NVIDIA/nvidia-docker).
 For the later to work, Nvidia drivers should be installed.
-Then, when in SeisCL repository, build the docker image as follows:
+Then, when in the project repository, build the docker image as follows:
 
     docker build -t seisai:v0
 
@@ -33,7 +32,7 @@ You can then launch any of the python scripts in this repo as follows:
 
 This makes accessible all gpus (`--gpus all`), mounting the current directory to a
 to the same path in the docker (second line), running the docker as the current user
-(for file permission), and runs the scripts `Case_article.py`.
+(for file permission), and runs the script `Case_article.py`.
 
 #### b) Install all requirements
 
@@ -42,8 +41,8 @@ The main python requirements are:
 *   [tensorflow](https://www.tensorflow.org). This project was tested with versions 1.8 to 1.15.
 The preferred method of installation is through pip, but many options are available.
 *  [SeisCL](https://github.com/gfabieno/SeisCL). Follow the instruction in the README of
-the SeisCL repository. Preferred compiling options for this project are api=opencl, to use the
-OpenCL library (faster for small models) and nompi=1, because no MPI parallelization is required.
+the SeisCL repository. Preferred compiling options for this project are api=opencl (use
+OpenCL, which is faster than CUDA for small models) and nompi=1, because no MPI parallelization is required.
 Be sure to install SeisCL's python wrapper.
 
 Once SeisCL is installed, you can install all other python requirements with
@@ -96,7 +95,7 @@ Perform the testing on the 1D test set with
 
     python Case_article_test1D.py --testing=1 --logdir=Case_article*/4_* --niter=1000
 
-This will test on all the trained model contained in `Case_articleX`, for models at iteration
+This will test on all the trained models contained in `Case_articleX`, for models at iteration
 1000 for the 4th step of the training. The predictions for each model are stored in
 `/dataset_article/test/Case_articleX`. Figure 3 is reproduced along the test statistics.
 
@@ -109,7 +108,7 @@ To create the 2D test set and perform the testing:
 This will create the 2D testing set (may take a while) and test on all the trained models.
 Figure 4 is produced along the test statistics.
 
-#### 7. Testing in on real data (Figure 5 and 6)
+#### 7. Testing on real data (Figures 5 and 6)
 
 To download and preprocess the real data set:
 
