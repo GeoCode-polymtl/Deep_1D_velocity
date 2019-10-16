@@ -1,4 +1,3 @@
-**Status:** Archive (code is provided as-is, no updates expected)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3492115.svg)](https://doi.org/10.5281/zenodo.3492115)
 
 # 1D Velocity estimation using neural-networks
