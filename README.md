@@ -39,7 +39,7 @@ to the same path in the docker (second line), running the docker as the current 
 It is recommended to create a new virtual environment for this project with Python3.
 The main python requirements are:
 *   [tensorflow](https://www.tensorflow.org). This project was tested with versions 1.8 to 1.15.
-The preferred method of installation is through pip, but many options are available.
+The preferred method of installation is through pip, but many options are available. If using pip, be sure to use python version of <=3.7, as tensorflow 1 is not available from 3.8. 
 *  [SeisCL](https://github.com/gfabieno/SeisCL). Follow the instruction in the README of
 the SeisCL repository. Preferred compiling options for this project are api=opencl (use
 OpenCL, which is faster than CUDA for small models) and nompi=1, because no MPI parallelization is required.
